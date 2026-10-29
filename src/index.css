@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F6F1E7;
+    --bg-card: #FBF8F1;
+    --text-primary: #171717;
+    --text-secondary: #68645E;
+    --border-color: #DED6C9;
+    --accent-primary: #C92323;
+    --indicator-fake: #D92D2D;
+    --indicator-real: #13834D;
+    --indicator-neutral: #7051D8;
+    --muted-red: #FCE3DE;
+    --muted-green: #DDF1E3;
+  }
+
+  .dark {
+    --bg-main: #141311;
+    --bg-card: #1D1C19;
+    --text-primary: #EDE8DF;
+    --text-secondary: #9E988F;
+    --border-color: #33312B;
+    --accent-primary: #E03535;
+    --indicator-fake: #E03535;
+    --indicator-real: #22A062;
+    --indicator-neutral: #8A6EE8;
+    --muted-red: #351C1A;
+    --muted-green: #173322;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+/* Custom scrollbars matching newspaper theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
